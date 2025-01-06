@@ -15,6 +15,7 @@ namespace SchoolDBProject.Controllers
             _studentService = studentService;
         }
 
+        //test
         [HttpGet("get-all-students")]
         public IActionResult GetAllStudents()
         {
