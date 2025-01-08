@@ -2,19 +2,20 @@ using SchoolDBProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 
-// Register StudentService
-builder.Services.AddSingleton<StudentService>();
+builder.Services.AddSingleton<StudentService>();  
+builder.Services.AddSingleton<ParentService>();
+builder.Services.AddSingleton<TeacherService>();
+builder.Services.AddSingleton<EmployeeService>();
+builder.Services.AddSingleton<ClassService>();
+builder.Services.AddSingleton<SubjectService>();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

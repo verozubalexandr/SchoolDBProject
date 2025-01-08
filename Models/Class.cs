@@ -14,5 +14,13 @@ namespace SchoolDBProject.Models
         public int[] StudentIds { get; set; }
 
         public int[] SubjectIds { get; set; }
+
+        public void RemoveSubject(int subjectId)
+        {
+            if (SubjectIds.Contains(subjectId))
+            {
+                SubjectIds = SubjectIds.Where(id => id != subjectId).ToArray();
+            }
+        }
     }
 }

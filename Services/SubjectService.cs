@@ -1,4 +1,7 @@
 ﻿using SchoolDBProject.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SchoolDBProject.Services
 {
@@ -11,33 +14,41 @@ namespace SchoolDBProject.Services
             _subjects = new List<Subject>();
         }
 
+        //add new subject
         public void AddSubject(Subject subject)
         {
+            subject.Id = GenerateId();
             _subjects.Add(subject);
         }
 
+        //get all subjects
         public List<Subject> GetAllSubjects()
         {
             return _subjects;
         }
 
+        //get subject by ID
         public Subject GetSubjectById(int id)
         {
             return _subjects.FirstOrDefault(s => s.Id == id);
         }
 
-        public void UpdateSubject(int id, Subject updatedSubject)
+        //update an existing subject
+        public void UpdateSubject(int id, SubjectDTO subjectDTO)
         {
             var subject = GetSubjectById(id);
-            if (subject != null)
+            if (subject == null)
             {
-                subject.Name = updatedSubject.Name;
-                subject.Code = updatedSubject.Code;
-                subject.Description = updatedSubject.Description;
-                subject.ClassIds = updatedSubject.ClassIds;
+                throw new ArgumentException("Subject not found");
             }
+
+            subject.Name = subjectDTO.Name ?? subject.Name;
+            subject.Code = subjectDTO.Code ?? subject.Code;
+            subject.Description = subjectDTO.Description ?? subject.Description;
+            subject.ClassIds = subjectDTO.ClassIds ?? subject.ClassIds;
         }
 
+        //delete a subject by ID
         public void DeleteSubject(int id)
         {
             var subject = GetSubjectById(id);
@@ -45,6 +56,13 @@ namespace SchoolDBProject.Services
             {
                 _subjects.Remove(subject);
             }
+        }
+
+        //id generation method from IIdGenerator interface
+        private int GenerateId()
+        {
+            var now = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            return (int)(now % int.MaxValue);
         }
     }
 }
