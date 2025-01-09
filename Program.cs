@@ -1,4 +1,7 @@
 using SchoolDBProject.Services;
+using SchoolDBProject.Models;
+
+//https://localhost:7053/api/students/get-all-students
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,3 +32,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+

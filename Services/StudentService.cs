@@ -1,16 +1,19 @@
 ﻿using SchoolDBProject.Interfaces;
 using SchoolDBProject.Models;
+using SchoolDBProject.Utils;
 
 namespace SchoolDBProject.Services
 {
     public class StudentService : IIdGenerator
     {
+        private readonly string _filePath = "students.json";
         private List<Student> _students;
 
         //create students list
         public StudentService(ParentService parentService)
         {
-            _students = new List<Student>();
+            //_students = new List<Student>();
+            _students = JsonDataStore.LoadData<Student>(_filePath);
         }
 
         //add new student
@@ -18,6 +21,8 @@ namespace SchoolDBProject.Services
         {
             student.Id = GenerateId();
             _students.Add(student);
+
+            JsonDataStore.SaveData(_filePath, _students);
         }
 
         //get all students
@@ -54,6 +59,8 @@ namespace SchoolDBProject.Services
             student.PhoneNumber = updatedStudent.PhoneNumber ?? student.PhoneNumber;
             student.Email = updatedStudent.Email ?? student.Email;
             student.ParentIds = updatedStudent.ParentIds ?? student.ParentIds;
+
+            JsonDataStore.SaveData(_filePath, _students);
         }
 
         //delete student by id
@@ -64,6 +71,8 @@ namespace SchoolDBProject.Services
             {
                 _students.Remove(student);
             }
+
+            JsonDataStore.SaveData(_filePath, _students);
         }
 
         //id generation method from IIdGenerator interface
