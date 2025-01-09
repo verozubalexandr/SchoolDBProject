@@ -1,4 +1,5 @@
 ﻿using SchoolDBProject.Models;
+using SchoolDBProject.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,13 @@ namespace SchoolDBProject.Services
 {
     public class SubjectService
     {
+        private readonly string _filePath = "DBFiles/subject.json";
         private List<Subject> _subjects;
 
         public SubjectService()
         {
-            _subjects = new List<Subject>();
+            //_subjects = new List<Subject>();
+            _subjects = JsonDataStore.LoadData<Subject>(_filePath);
         }
 
         //add new subject
@@ -19,6 +22,8 @@ namespace SchoolDBProject.Services
         {
             subject.Id = GenerateId();
             _subjects.Add(subject);
+
+            JsonDataStore.SaveData(_filePath, _subjects);
         }
 
         //get all subjects
@@ -46,6 +51,8 @@ namespace SchoolDBProject.Services
             subject.Code = subjectDTO.Code ?? subject.Code;
             subject.Description = subjectDTO.Description ?? subject.Description;
             subject.ClassIds = subjectDTO.ClassIds ?? subject.ClassIds;
+
+            JsonDataStore.SaveData(_filePath, _subjects);
         }
 
         //delete a subject by ID
@@ -55,6 +62,7 @@ namespace SchoolDBProject.Services
             if (subject != null)
             {
                 _subjects.Remove(subject);
+                JsonDataStore.SaveData(_filePath, _subjects);
             }
         }
 

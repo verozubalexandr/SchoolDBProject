@@ -1,0 +1,112 @@
+[
+  {
+    "Id": 1458392735,
+    "FirstName": "Jakub",
+    "LastName": "Nowak",
+    "Age": 14,
+    "ClassId": 0,
+    "PhoneNumber": "785462938",
+    "Email": "jakub.nowak14@gmail.com",
+    "Pesel": "03091567891",
+    "ParentIds": []
+  },
+  {
+    "Id": 1275930462,
+    "FirstName": "Anna",
+    "LastName": "Kowalska",
+    "Age": 12,
+    "ClassId": 0,
+    "PhoneNumber": "684375293",
+    "Email": "anna.kowalska12@yahoo.com",
+    "Pesel": "10080239456",
+    "ParentIds": []
+  },
+  {
+    "Id": 1362847590,
+    "FirstName": "Mateusz",
+    "LastName": "Wiśniewski",
+    "Age": 13,
+    "ClassId": 0,
+    "PhoneNumber": "794328154",
+    "Email": "mateusz.wisniewski13@outlook.com",
+    "Pesel": "12051274984",
+    "ParentIds": []
+  },
+  {
+    "Id": 1587390246,
+    "FirstName": "Zofia",
+    "LastName": "Lewandowska",
+    "Age": 11,
+    "ClassId": 0,
+    "PhoneNumber": "692473851",
+    "Email": "zofia.lewandowska11@gmail.com",
+    "Pesel": "08031348920",
+    "ParentIds": []
+  },
+  {
+    "Id": 1482093571,
+    "FirstName": "Jan",
+    "LastName": "Kowalczyk",
+    "Age": 14,
+    "ClassId": 0,
+    "PhoneNumber": "675492813",
+    "Email": "jan.kowalczyk14@gmail.com",
+    "Pesel": "07091457368",
+    "ParentIds": []
+  },
+  {
+    "Id": 1245389203,
+    "FirstName": "Agnieszka",
+    "LastName": "Zielińska",
+    "Age": 10,
+    "ClassId": 0,
+    "PhoneNumber": "602438975",
+    "Email": "agnieszka.zielinska10@gmail.com",
+    "Pesel": "15050498372",
+    "ParentIds": []
+  },
+  {
+    "Id": 1328547612,
+    "FirstName": "Kamil",
+    "LastName": "Szymański",
+    "Age": 9,
+    "ClassId": 0,
+    "PhoneNumber": "794621803",
+    "Email": "kamil.szymanski9@gmail.com",
+    "Pesel": "06031184927",
+    "ParentIds": []
+  },
+  {
+    "Id": 1476823594,
+    "FirstName": "Maria",
+    "LastName": "Jankowska",
+    "Age": 12,
+    "ClassId": 0,
+    "PhoneNumber": "684932715",
+    "Email": "maria.jankowska12@gmail.com",
+    "Pesel": "09071245738",
+    "ParentIds": []
+  },
+  {
+    "Id": 1528390472,
+    "FirstName": "Piotr",
+    "LastName": "Dąbrowski",
+    "Age": 14,
+    "ClassId": 0,
+    "PhoneNumber": "724638591",
+    "Email": "piotr.dabrowski14@gmail.com",
+    "Pesel": "07091487536",
+    "ParentIds": []
+  },
+  {
+    "Id": 1612847593,
+    "FirstName": "Emilia",
+    "LastName": "Kamińska",
+    "Age": 11,
+    "ClassId": 0,
+    "PhoneNumber": "678394215",
+    "Email": "emilia.kaminska11@gmail.com",
+    "Pesel": "08041398452",
+    "ParentIds": []
+  }
+]

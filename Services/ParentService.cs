@@ -1,17 +1,20 @@
 ﻿using SchoolDBProject.Models;
 using SchoolDBProject.Interfaces;
 using System.Linq;
+using SchoolDBProject.Utils;
 
 namespace SchoolDBProject.Services
 {
     public class ParentService : IIdGenerator
     {
+        private readonly string _filePath = "DBFiles/parents.json";
         private List<Parent> _parents;
 
         //create parents list
         public ParentService()
         {
-            _parents = new List<Parent>();
+            //_parents = new List<Parent>();
+            _parents = JsonDataStore.LoadData<Parent>(_filePath);
         }
 
         //add new parent
@@ -19,6 +22,8 @@ namespace SchoolDBProject.Services
         {
             parent.Id = GenerateId();
             _parents.Add(parent);
+
+            JsonDataStore.SaveData(_filePath, _parents);
         }
 
         //get all parents
@@ -47,6 +52,8 @@ namespace SchoolDBProject.Services
             parent.PhoneNumber = updatedParent.PhoneNumber ?? parent.PhoneNumber;
             parent.Email = updatedParent.Email ?? parent.Email;
             parent.ChildIds = updatedParent.ChildIds ?? parent.ChildIds;
+
+            JsonDataStore.SaveData(_filePath, _parents);
         }
 
         //delete parent by id
@@ -56,6 +63,7 @@ namespace SchoolDBProject.Services
             if (parent != null)
             {
                 _parents.Remove(parent);
+                JsonDataStore.SaveData(_filePath, _parents);
             }
         }
 

@@ -1,16 +1,19 @@
 ﻿using SchoolDBProject.Interfaces;
 using SchoolDBProject.Models;
+using SchoolDBProject.Utils;
 using System.Linq;
 
 namespace SchoolDBProject.Services
 {
     public class ClassService : IIdGenerator
     {
+        private readonly string _filePath = "DBFiles/classes.json";
         private List<Class> _classes;
 
         public ClassService()
         {
-            _classes = new List<Class>();
+            //_classes = new List<Class>();
+            _classes = JsonDataStore.LoadData<Class>(_filePath);
         }
 
         // add a new class
@@ -18,6 +21,8 @@ namespace SchoolDBProject.Services
         {
             newClass.Id = GenerateId();
             _classes.Add(newClass);
+
+            JsonDataStore.SaveData(_filePath, _classes);
         }
 
         //get all classes
@@ -45,6 +50,8 @@ namespace SchoolDBProject.Services
             classObj.TeacherId = updatedClass.TeacherId ?? classObj.TeacherId;
             classObj.StudentIds = updatedClass.StudentIds ?? classObj.StudentIds;
             classObj.SubjectIds = updatedClass.SubjectIds ?? classObj.SubjectIds;
+
+            JsonDataStore.SaveData(_filePath, _classes);
         }
 
         //delete class by ID
@@ -54,6 +61,7 @@ namespace SchoolDBProject.Services
             if (classObj != null)
             {
                 _classes.Remove(classObj);
+                JsonDataStore.SaveData(_filePath, _classes);
             }
         }
 

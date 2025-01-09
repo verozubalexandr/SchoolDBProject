@@ -6,7 +6,7 @@ namespace SchoolDBProject.Services
 {
     public class StudentService : IIdGenerator
     {
-        private readonly string _filePath = "students.json";
+        private readonly string _filePath = "DBFiles/students.json";
         private List<Student> _students;
 
         //create students list
@@ -70,9 +70,8 @@ namespace SchoolDBProject.Services
             if (student != null)
             {
                 _students.Remove(student);
+                JsonDataStore.SaveData(_filePath, _students);
             }
-
-            JsonDataStore.SaveData(_filePath, _students);
         }
 
         //id generation method from IIdGenerator interface

@@ -1,4 +1,5 @@
 ﻿using SchoolDBProject.Models;
+using SchoolDBProject.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,13 @@ namespace SchoolDBProject.Services
 {
     public class EmployeeService
     {
+        private readonly string _filePath = "DBFiles/employees.json";
         private List<Employee> _employees;
 
         public EmployeeService()
         {
-            _employees = new List<Employee>();
+            //_employees = new List<Employee>();
+            _employees = JsonDataStore.LoadData<Employee>(_filePath);
         }
 
         //add new employee
@@ -19,6 +22,8 @@ namespace SchoolDBProject.Services
         {
             employee.Id = GenerateId();
             _employees.Add(employee);
+
+            JsonDataStore.SaveData(_filePath, _employees);
         }
 
         //get all employees
@@ -47,6 +52,8 @@ namespace SchoolDBProject.Services
             employee.Position = updatedEmployee.Position ?? employee.Position;
             employee.PhoneNumber = updatedEmployee.PhoneNumber ?? employee.PhoneNumber;
             employee.Email = updatedEmployee.Email ?? employee.Email;
+
+            JsonDataStore.SaveData(_filePath, _employees);
         }
 
         //delete employee by id
@@ -56,6 +63,7 @@ namespace SchoolDBProject.Services
             if (employee != null)
             {
                 _employees.Remove(employee);
+                JsonDataStore.SaveData(_filePath, _employees);
             }
         }
 
