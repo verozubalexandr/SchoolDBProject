@@ -38,6 +38,13 @@ namespace SchoolDBProject.Services
             return _employees.FirstOrDefault(e => e.Id == id);
         }
 
+        //get employees by name
+        public List<Employee> GetEmployeesByName(string name)
+        {
+            var employees = _employees.Where(e => e.FirstName.Contains(name, StringComparison.OrdinalIgnoreCase) || e.LastName.Contains(name, StringComparison.OrdinalIgnoreCase)).ToList();
+            return employees;
+        }
+
         //update employee info
         public void UpdateEmployee(int id, UpdateEmployeeDTO updatedEmployee)
         {

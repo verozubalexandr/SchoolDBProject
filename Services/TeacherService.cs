@@ -37,6 +37,19 @@ namespace SchoolDBProject.Services
             return _teachers.FirstOrDefault(t => t.Id == id);
         }
 
+        //get teacher by subject id
+        public List<Teacher> GetTeachersBySubjectId(int subjectId)
+        {
+            return _teachers.Where(t => t.SubjectIds.Contains(subjectId)).ToList();
+        }
+
+        //get teacher by name or surname
+        public List<Teacher> GetTeachersByName(string name)
+        {
+            return _teachers.Where(t => t.FirstName.Contains(name, StringComparison.OrdinalIgnoreCase) ||
+                                         t.LastName.Contains(name, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
         //update teacher's info
         public void UpdateTeacher(int id, UpdateTeacherDTO updatedTeacher)
         {

@@ -39,6 +39,18 @@ namespace SchoolDBProject.Controllers
             return Ok(classObj);
         }
 
+        //get classes by teacher id
+        [HttpGet("get-classes-by-teacher/{teacherId}")]
+        public IActionResult GetClassesByTeacherId(int teacherId)
+        {
+            var classes = _classService.GetClassesByTeacherId(teacherId);
+            if (classes == null || !classes.Any())
+            {
+                return NotFound($"No classes found for teacher with ID {teacherId}.");
+            }
+            return Ok(classes);
+        }
+
         //add a new class
         [HttpPost("add-class")]
         public IActionResult AddClass([FromBody] Class classObj)

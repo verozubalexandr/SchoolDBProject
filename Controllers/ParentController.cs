@@ -34,6 +34,36 @@ namespace SchoolDBProject.Controllers
             return Ok(parent);
         }
 
+        //get parents by child id
+        [HttpGet("get-parents-by-child/{childId}")]
+        public IActionResult GetParentsByChildId(int childId)
+        {
+            var parents = _parentService.GetParentsByChildId(childId);
+            if (parents == null || !parents.Any())
+            {
+                return NotFound($"No parents found for child with ID {childId}.");
+            }
+            return Ok(parents);
+        }
+
+        //get parents by name or last name
+        [HttpGet("get-parents-by-name")]
+        public IActionResult GetParentsByName([FromQuery] string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return BadRequest("Name query parameter is required.");
+            }
+
+            var parents = _parentService.GetParentsByName(name);
+            if (parents == null || !parents.Any())
+            {
+                return NotFound($"No parents found with name or surname containing '{name}'.");
+            }
+
+            return Ok(parents);
+        }
+
         //add new parent
         [HttpPost("add-parent")]
         public IActionResult AddParent([FromBody] Parent parent)

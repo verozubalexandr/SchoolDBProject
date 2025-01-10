@@ -1,7 +1,11 @@
 using SchoolDBProject.Services;
 using SchoolDBProject.Models;
 
+//przykladowe zapytania w postaci linkow, port moze sie roznic
 //https://localhost:7053/api/students/get-all-students
+//https://localhost:7053/api/students/get-students-by-class/1357724365
+//https://localhost:7053/api/Teachers/get-teachers-by-subject/1356849531
+//pelna liste dostepnych zapytan mozna znalezc po uruchomieniu projektu i przejsciu do interfejsu Swagger
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -38,8 +38,14 @@ namespace SchoolDBProject.Services
             return _subjects.FirstOrDefault(s => s.Id == id);
         }
 
+        //get subjects by name
+        public List<Subject> GetSubjectsByName(string name)
+        {
+            return _subjects.Where(s => s.Name.Contains(name, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
         //update an existing subject
-        public void UpdateSubject(int id, SubjectDTO subjectDTO)
+        public void UpdateSubject(int id, UpdateSubjectDTO subjectDTO)
         {
             var subject = GetSubjectById(id);
             if (subject == null)

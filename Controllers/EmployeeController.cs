@@ -39,6 +39,24 @@ namespace SchoolDBProject.Controllers
             return Ok(employee);
         }
 
+        //get employees by name or last name
+        [HttpGet("get-employees-by-name")]
+        public IActionResult GetEmployeesByName([FromQuery] string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return BadRequest("Name query parameter is required.");
+            }
+
+            var employees = _employeeService.GetEmployeesByName(name);
+            if (employees == null || !employees.Any())
+            {
+                return NotFound($"No employees found with name or surname containing '{name}'.");
+            }
+
+            return Ok(employees);
+        }
+
         //add new employee
         [HttpPost("add-employee")]
         public IActionResult AddEmployee([FromBody] Employee employee)

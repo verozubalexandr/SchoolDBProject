@@ -34,6 +34,36 @@ namespace SchoolDBProject.Controllers
             return Ok(teacher);
         }
 
+        //get teachers by subject id
+        [HttpGet("get-teachers-by-subject/{subjectId}")]
+        public IActionResult GetTeachersBySubjectId(int subjectId)
+        {
+            var teachers = _teacherService.GetTeachersBySubjectId(subjectId);
+            if (teachers == null || !teachers.Any())
+            {
+                return NotFound($"No teachers found for subject {subjectId}.");
+            }
+            return Ok(teachers);
+        }
+
+        //get teachers by name
+        [HttpGet("get-teachers-by-name")]
+        public IActionResult GetTeachersByName([FromQuery] string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return BadRequest("Name query parameter is required.");
+            }
+
+            var teachers = _teacherService.GetTeachersByName(name);
+            if (teachers == null || !teachers.Any())
+            {
+                return NotFound($"No teachers found with name or surname containing '{name}'.");
+            }
+
+            return Ok(teachers);
+        }
+
         //add new teacher
         [HttpPost("add-teacher")]
         public IActionResult AddTeacher([FromBody] Teacher teacher)

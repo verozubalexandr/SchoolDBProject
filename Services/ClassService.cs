@@ -37,6 +37,12 @@ namespace SchoolDBProject.Services
             return _classes.FirstOrDefault(c => c.Id == id);
         }
 
+        //get classes by teacher id
+        public List<Class> GetClassesByTeacherId(int teacherId)
+        {
+            return _classes.Where(c => c.TeacherId == teacherId).ToList();
+        }
+
         //update class details by ID
         public void UpdateClass(int id, UpdateClassDTO updatedClass)
         {

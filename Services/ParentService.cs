@@ -38,6 +38,18 @@ namespace SchoolDBProject.Services
             return _parents.FirstOrDefault(p => p.Id == id);
         }
 
+        //get parents by child id
+        public List<Parent> GetParentsByChildId(int childId)
+        {
+            return _parents.Where(p => p.ChildIds.Contains(childId)).ToList();
+        }
+
+        //get parents by name
+        public List<Parent> GetParentsByName(string name)
+        {
+            return _parents.Where(p => p.FirstName.Contains(name, StringComparison.OrdinalIgnoreCase) || p.LastName.Contains(name, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
         //update student's info
         public void UpdateParent(int id, UpdateParentDTO updatedParent)
         {

@@ -40,6 +40,18 @@ namespace SchoolDBProject.Controllers
             return Ok(subject);
         }
 
+        //get subjects by name
+        [HttpGet("get-subjects-by-name")]
+        public IActionResult GetSubjectsByName([FromQuery] string name)
+        {
+            var subjects = _subjectService.GetSubjectsByName(name);
+            if (subjects == null || subjects.Count == 0)
+            {
+                return NotFound($"No subjects found with name containing '{name}'.");
+            }
+            return Ok(subjects);
+        }
+
         //add new subject
         [HttpPost("add-subject")]
         public IActionResult AddSubject([FromBody] Subject subject)
@@ -55,7 +67,7 @@ namespace SchoolDBProject.Controllers
 
         //update an existing subject
         [HttpPut("update-subject/{id}")]
-        public IActionResult UpdateSubject(int id, [FromBody] SubjectDTO subjectDTO)
+        public IActionResult UpdateSubject(int id, [FromBody] UpdateSubjectDTO subjectDTO)
         {
             try
             {
