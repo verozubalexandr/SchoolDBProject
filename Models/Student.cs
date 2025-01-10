@@ -32,13 +32,5 @@ namespace SchoolDBProject.Models
         public string Pesel { get; set; }
 
         public int[] ParentIds { get; set; }
-
-        public void RemoveParent(int parentId)
-        {
-            if (ParentIds.Contains(parentId))
-            {
-                ParentIds = ParentIds.Where(id => id != parentId).ToArray();
-            }
-        }
     }
 }

@@ -50,7 +50,6 @@ namespace SchoolDBProject.Services
             subject.Name = subjectDTO.Name ?? subject.Name;
             subject.Code = subjectDTO.Code ?? subject.Code;
             subject.Description = subjectDTO.Description ?? subject.Description;
-            subject.ClassIds = subjectDTO.ClassIds ?? subject.ClassIds;
 
             JsonDataStore.SaveData(_filePath, _subjects);
         }

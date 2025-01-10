@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "Id": 1355453466,
+    "FirstName": "Marek",
+    "LastName": "Kozlowski",
+    "SubjectIds": [1356897902],
+    "ExperienceYears": 16,
+    "PhoneNumber": "321654987",
+    "Email": "marek.kozlowski@school.pl",
+    "Pesel": "80040345612",
+    "Position": "Chemistry Teacher",
+    "ClassIds": [1357742859]
+  },
+  {
+    "Id": 1355530829,
+    "FirstName": "Joanna",
+    "LastName": "Czarnecka",
+    "SubjectIds": [1356876844],
+    "ExperienceYears": 22,
+    "PhoneNumber": "789123654",
+    "Email": "joanna.czarnecka@school.pl",
+    "Pesel": "69040256783",
+    "Position": "Biology Teacher",
+    "ClassIds": []
+  },
+  {
+    "Id": 1355561410,
+    "FirstName": "Adam",
+    "LastName": "Wroblewski",
+    "SubjectIds": [1356884378],
+    "ExperienceYears": 13,
+    "PhoneNumber": "456789123",
+    "Email": "adam.wroblewski@school.pl",
+    "Pesel": "75020712389",
+    "Position": "History Teacher",
+    "ClassIds": []
+  },
+  {
+    "Id": 1355584597,
+    "FirstName": "Ewa",
+    "LastName": "Lisowska",
+    "SubjectIds": [1356849531],
+    "ExperienceYears": 10,
+    "PhoneNumber": "123678945",
+    "Email": "ewa.lisowska@school.pl",
+    "Pesel": "85061234567",
+    "Position": "Math Teacher",
+    "ClassIds": [1357724365]
+  },
+  {
+    "Id": 1355607884,
+    "FirstName": "Krzysztof",
+    "LastName": "Majewski",
+    "SubjectIds": [1356865463],
+    "ExperienceYears": 18,
+    "PhoneNumber": "678954321",
+    "Email": "krzysztof.majewski@school.pl",
+    "Pesel": "78040512345",
+    "Position": "Physics Teacher",
+    "ClassIds": [1357764750]
+  }
+]

@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "Id": 1363124518,
+    "FirstName": "Krzysztof",
+    "LastName": "Nowak",
+    "PhoneNumber": "785462938",
+    "Email": "krzysztof.nowak@gmail.com",
+    "Pesel": "12345678901",
+    "ChildIds": [
+      1458392735
+    ]
+  },
+  {
+    "Id": 1363136824,
+    "FirstName": "Joanna",
+    "LastName": "Kowalska",
+    "PhoneNumber": "684375293",
+    "Email": "joanna.kowalska@yahoo.com",
+    "Pesel": "23456789012",
+    "ChildIds": [
+      1275930462
+    ]
+  },
+  {
+    "Id": 1363149295,
+    "FirstName": "Andrzej",
+    "LastName": "Wisniewski",
+    "PhoneNumber": "794328154",
+    "Email": "andrzej.wisniewski@outlook.com",
+    "Pesel": "34567890123",
+    "ChildIds": [
+      1362847590
+    ]
+  },
+  {
+    "Id": 1363160805,
+    "FirstName": "Monika",
+    "LastName": "Lewandowska",
+    "PhoneNumber": "692473851",
+    "Email": "monika.lewandowska@gmail.com",
+    "Pesel": "45678901234",
+    "ChildIds": [
+      1587390246
+    ]
+  },
+  {
+    "Id": 1363167725,
+    "FirstName": "Pawel",
+    "LastName": "Kowalczyk",
+    "PhoneNumber": "675492813",
+    "Email": "pawel.kowalczyk@gmail.com",
+    "Pesel": "56789012345",
+    "ChildIds": [
+      1482093571
+    ]
+  },
+  {
+    "Id": 1363174386,
+    "FirstName": "Katarzyna",
+    "LastName": "Zielinska",
+    "PhoneNumber": "602438975",
+    "Email": "katarzyna.zielinska@gmail.com",
+    "Pesel": "67890123456",
+    "ChildIds": [
+      1245389203
+    ]
+  },
+  {
+    "Id": 1363182127,
+    "FirstName": "Tomasz",
+    "LastName": "Szymanski",
+    "PhoneNumber": "794621803",
+    "Email": "tomasz.szymanski@gmail.com",
+    "Pesel": "78901234567",
+    "ChildIds": [
+      1328547612
+    ]
+  },
+  {
+    "Id": 1363189117,
+    "FirstName": "Barbara",
+    "LastName": "Jankowska",
+    "PhoneNumber": "684932715",
+    "Email": "barbara.jankowska@gmail.com",
+    "Pesel": "89012345678",
+    "ChildIds": [
+      1476823594
+    ]
+  },
+  {
+    "Id": 1363195782,
+    "FirstName": "Marek",
+    "LastName": "Dabrowski",
+    "PhoneNumber": "724638591",
+    "Email": "marek.dabrowski@gmail.com",
+    "Pesel": "90123456789",
+    "ChildIds": [
+      1528390472
+    ]
+  },
+  {
+    "Id": 1363202956,
+    "FirstName": "Alicja",
+    "LastName": "Kaminska",
+    "PhoneNumber": "678394215",
+    "Email": "alicja.kaminska@gmail.com",
+    "Pesel": "01234567890",
+    "ChildIds": [
+      1612847593
+    ]
+  }
+]

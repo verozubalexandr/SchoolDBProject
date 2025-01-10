@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "Id": 1356849531,
+    "Name": "Matematyka",
+    "Code": "MTH101",
+    "Description": "Podstawowe zasady matematyki i algebra."
+  },
+  {
+    "Id": 1356865463,
+    "Name": "Fizyka",
+    "Code": "PHY102",
+    "Description": "Podstawy mechaniki, optyki i termodynamiki."
+  },
+  {
+    "Id": 1356876844,
+    "Name": "Biologia",
+    "Code": "BIO103",
+    "Description": "Wprowadzenie do biologii kom\u00F3rkowej i ekologii."
+  },
+  {
+    "Id": 1356884378,
+    "Name": "Historia",
+    "Code": "HIS104",
+    "Description": "Historia Europy w epoce \u015Bredniowiecza."
+  },
+  {
+    "Id": 1356897902,
+    "Name": "Chemia",
+    "Code": "CHE105",
+    "Description": "Podstawy chemii organicznej i nieorganicznej."
+  },
+  {
+    "Id": 1356916005,
+    "Name": "Geografia",
+    "Code": "GEO107",
+    "Description": "Podstawy geografii fizycznej i politycznej."
+  }
+]

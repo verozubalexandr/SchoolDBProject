@@ -28,13 +28,5 @@ namespace SchoolDBProject.Models
         [Required(ErrorMessage = "At least one child ID is required.")]
         [MinLength(1, ErrorMessage = "At least one child ID is required.")]
         public int[] ChildIds { get; set; }
-
-        public void RemoveChild(int childId)
-        {
-            if (ChildIds.Contains(childId))
-            {
-                ChildIds = ChildIds.Where(id => id != childId).ToArray();
-            }
-        }
     }
 }

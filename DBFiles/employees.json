@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "Id": 1364470014,
+    "FirstName": "Piotr",
+    "LastName": "Kowalski",
+    "Position": "Dyrektor",
+    "PhoneNumber": "684375293",
+    "Email": "piotr.kowalski@szkola.pl",
+    "Pesel": "23456789012"
+  },
+  {
+    "Id": 1364479676,
+    "FirstName": "Marek",
+    "LastName": "Lewandowski",
+    "Position": "Pracownik administracyjny",
+    "PhoneNumber": "692473851",
+    "Email": "marek.lewandowski@szkola.pl",
+    "Pesel": "45678901234"
+  },
+  {
+    "Id": 1364496507,
+    "FirstName": "Katarzyna",
+    "LastName": "Kowalczyk",
+    "Position": "Pedagog",
+    "PhoneNumber": "675492813",
+    "Email": "katarzyna.kowalczyk@szkola.pl",
+    "Pesel": "56789012345"
+  },
+  {
+    "Id": 1364504577,
+    "FirstName": "Alicja",
+    "LastName": "Jankowska",
+    "Position": "Bibliotekarka",
+    "PhoneNumber": "794621803",
+    "Email": "alicja.jankowska@szkola.pl",
+    "Pesel": "78901234567"
+  },
+  {
+    "Id": 1364514186,
+    "FirstName": "Zofia",
+    "LastName": "Dabrowska",
+    "Position": "Sekretarka",
+    "PhoneNumber": "724638591",
+    "Email": "zofia.dabrowska@szkola.pl",
+    "Pesel": "90123456789"
+  },
+  {
+    "Id": 1364521845,
+    "FirstName": "Emilia",
+    "LastName": "Kaminska",
+    "Position": "Kierownik administracyjny",
+    "PhoneNumber": "678394215",
+    "Email": "emilia.kaminska@szkola.pl",
+    "Pesel": "01234567890"
+  },
+  {
+    "Id": 1364531829,
+    "FirstName": "Jolanta",
+    "LastName": "Wojcik",
+    "Position": "Pracownik porzadkowy",
+    "PhoneNumber": "735849203",
+    "Email": "jolanta.wojcik@szkola.pl",
+    "Pesel": "23456789023"
+  },
+  {
+    "Id": 1364540311,
+    "FirstName": "Grzegorz",
+    "LastName": "Nowak",
+    "Position": "Pracownik porzadkowy",
+    "PhoneNumber": "692304571",
+    "Email": "grzegorz.nowak@szkola.pl",
+    "Pesel": "34567890134"
+  }
+]
